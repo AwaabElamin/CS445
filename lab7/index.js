@@ -23,6 +23,18 @@ function refresh() {
         document.getElementById("phone3").innerHTML = phone;
         document.getElementById("email3").innerHTML = email;
     });
+    getUser("https://randomuser.me/api/").then(() => {
+        document.getElementById("name4").innerHTML = firstName + " " + lastName
+        document.getElementById("image4").src = pic;
+        document.getElementById("phone4").innerHTML = phone;
+        document.getElementById("email4").innerHTML = email;
+    });
+    getUser("https://randomuser.me/api/").then(() => {
+        document.getElementById("name5").innerHTML = firstName + " " + lastName
+        document.getElementById("image5").src = pic;
+        document.getElementById("phone5").innerHTML = phone;
+        document.getElementById("email5").innerHTML = email;
+    });
 }
 async function getUser(url) {
     const res = await fetch(url);
